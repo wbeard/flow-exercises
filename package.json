@@ -1,0 +1,22 @@
+{
+  "name": "flow-exercises",
+  "version": "1.0.0",
+  "description": "An introduction to typing in JavaScript with flow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wbeard/flow-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wbeard/flow-exercises/issues"
+  },
+  "homepage": "https://github.com/wbeard/flow-exercises#readme",
+  "devDependencies": {
+    "flow-bin": "^0.34.0"
+  }
+}
