@@ -18,5 +18,8 @@
   "homepage": "https://github.com/wbeard/flow-exercises#readme",
   "devDependencies": {
     "flow-bin": "^0.34.0"
+  },
+  "dependencies": {
+    "react": "^15.3.2"
   }
 }
