@@ -6,6 +6,7 @@ export default class Vehicle extends Component {
     wheelCount: PropTypes.number.isRequired,
     hasMotor: PropTypes.bool.isRequired,
     kind: PropTypes.oneOf(['car', 'truck', '18-wheeler', 'bicycle', 'motorcycle']).isRequired,
+    onDrive: PropTypes.func.isRequired,
     owners: PropTypes.arrayOf(PropTypes.string)
   };
 

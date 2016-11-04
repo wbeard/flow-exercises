@@ -5,7 +5,14 @@ const initialState = Immutable.Map({
   braking: false,
   turnDirection: null,
   inReverse: false,
-  speed: 0
+  speed: 0,
+  attributes: {
+    color: 'green',
+    wheelCount: 4,
+    hasMotor: false,
+    kind: 'bicycle',
+    owners: null
+  }
 });
 
 export const app = (state = initialState, action) => {
@@ -22,3 +29,10 @@ export const app = (state = initialState, action) => {
       return state;
   }
 }
+
+export getAttributes = (state) => state.get('attributes');
+export getColor = (state) => getAttributes(state).get('color');
+export getWheelCount = (state) => getAttributes(state).get('wheelCount');
+export getHasMotor = (state) => getAttributes(state).get('hasMotor');
+export getKind = (state) => getAttributes.get('kind');
+export getOwners = (state) => getAttributes.get('owners');

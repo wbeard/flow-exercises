@@ -12,6 +12,7 @@ type VehicleProps = {
   wheelCount: number,
   hasMotor: boolean,
   kind: VehicleKinds,
+  onDrive: Function,
   // explain why it's not a maybe type due to a value being provided in defaultProps
   owners: Owners
 };
@@ -20,7 +21,7 @@ export default class Vehicle extends Component<DefaultVehicleProps, VehicleProps
   static defaultProps = {
     owners: []
   };
-  
+
   render() {
     <div className={`vehicle-${this.props.kind}`}>
       <div>

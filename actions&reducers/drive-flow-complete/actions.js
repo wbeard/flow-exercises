@@ -10,7 +10,11 @@ export type DriveAction = {
   }
 };
 
-export const drive = (
+export type driveFn = (
+  accelerate: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
+) => DriveAction;
+
+export const drive: driveFn = (
   accelerate: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
 ): DriveAction => {
   return {
