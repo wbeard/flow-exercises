@@ -11,3 +11,4 @@
 6. [Actions & Reducers](./actions&reducers)
 7. [Containers](./containers)
 8. [Advanced](./advanced)
+9. [Troubleshooting](./troubleshooting)
