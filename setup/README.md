@@ -1,15 +1,16 @@
 ## Installing
 Flow is already installed and kept up to date in churro.
 
-However, if you need to install or update flow, install `flow-bin`:
+Check for the specified version in the project's `.flowconfig` (if it exists) and install:
+
+```bash
+npm install --save-dev flow-bin@0.33
+```
+
+If the project does not have a `.flowconfig`, use the latest version and run the `init` task to generate `.flowconfig`.
 
 ```bash
 npm install --save-dev flow-bin@latest
-```
-
-Now, in your project, create a `.flowconfig` by running flow's `init` task:
-
-```bash
 flow init
 ```
 
@@ -21,7 +22,7 @@ npm install --save-dev babel-transform-flow-strip-types@latest
 ```
 
 ## Running flow
-Flow is most useful by displaying errors & autocomplete information in your editor. See [the Editors](#editors) section below for help setting your editor up.
+Flow is most useful by displaying errors & autocomplete information in your editor. See [the Editors](./editors) section below for help setting your editor up.
 
 However, if you want to run flow in the console, just run:
 
