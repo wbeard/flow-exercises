@@ -23,7 +23,7 @@ export const app = (state = initialState, action: DriveAction) => {
   switch(action.type) {
     case 'DRIVE':
       return state.merge({
-        accelerating: action.acceleration,
+        accelerating: action.accelerating,
         braking: action.braking,
         turnDirection: action.turnDirection,
         inReverse: action.inReverse,
@@ -35,8 +35,8 @@ export const app = (state = initialState, action: DriveAction) => {
 }
 
 export const getAttributes = (state: AppState): Immutable.Map<string, any> => state.get('attributes');
-export const getColor = (state: AppState): ?string => getAttributes(state).get('color');
-export const getWheelCount = (state: AppState): ?number => getAttributes(state).get('wheelCount');
-export const getHasMotor = (state: AppState): ?boolean => getAttributes(state).get('hasMotor');
-export const getKind = (state: AppState): ?string => getAttributes.get('kind');
-export const getOwners = (state: AppState): ?Array<string> | [] => getAttributes.get('owners');
+export const getColor = (state: AppState): string => getAttributes(state).get('color');
+export const getWheelCount = (state: AppState): number => getAttributes(state).get('wheelCount');
+export const getHasMotor = (state: AppState): boolean => getAttributes(state).get('hasMotor');
+export const getKind = (state: AppState): string => getAttributes.get('kind');
+export const getOwners = (state: AppState): Array<string> => getAttributes.get('owners');

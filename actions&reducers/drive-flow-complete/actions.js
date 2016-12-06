@@ -3,7 +3,7 @@ type Direction = 'left' | 'right' | null;
 export type DriveAction = {
   type: 'DRIVE',
   payload: {
-    accelerate: boolean,
+    accelerating: boolean,
     braking: boolean,
     turnDirection: Direction,
     inReverse: boolean
@@ -11,16 +11,16 @@ export type DriveAction = {
 };
 
 export type driveFn = (
-  accelerate: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
+  accelerating: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
 ) => DriveAction;
 
 export const drive: driveFn = (
-  accelerate: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
-): DriveAction => {
+  accelerating: boolean, braking: boolean, turnDirection: Direction, inReverse: boolean
+) => {
   return {
     type: 'DRIVE',
     payload: {
-      accelerate,
+      accelerating,
       braking,
       turnDirection,
       inReverse

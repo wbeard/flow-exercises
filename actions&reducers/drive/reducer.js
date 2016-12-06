@@ -23,16 +23,16 @@ export const app = (state = initialState, action) => {
         braking: action.braking,
         turnDirection: action.turnDirection,
         inReverse: action.inReverse,
-        speed: (accelerating ? 1 : braking ? -1 : 0) + state.get('velocity');
+        speed: (action.accelerating ? 1 : action.braking ? -1 : 0) + state.get('speed')
       });
     default:
       return state;
   }
 }
 
-export getAttributes = (state) => state.get('attributes');
-export getColor = (state) => getAttributes(state).get('color');
-export getWheelCount = (state) => getAttributes(state).get('wheelCount');
-export getHasMotor = (state) => getAttributes(state).get('hasMotor');
-export getKind = (state) => getAttributes.get('kind');
-export getOwners = (state) => getAttributes.get('owners');
+export const getAttributes = (state) => state.get('attributes');
+export const getColor = (state) => getAttributes(state).get('color');
+export const getWheelCount = (state) => getAttributes(state).get('wheelCount');
+export const getHasMotor = (state) => getAttributes(state).get('hasMotor');
+export const getKind = (state) => getAttributes.get('kind');
+export const getOwners = (state) => getAttributes.get('owners');

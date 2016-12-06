@@ -7,10 +7,12 @@ export default class MyComponent extends Component {
   };
 
   render() {
-    <div>
-      <button onClick={ this.driveForward }>Drive!</button>
-      <button onClick={ this.stopDriving }>Brake!</button>
-    </div>
+    return (
+      <div>
+        <button onClick={ this.driveForward }>Drive!</button>
+        <button onClick={ this.stopDriving }>Brake!</button>
+      </div>
+    );
   }
 
   driveForward = () => {
