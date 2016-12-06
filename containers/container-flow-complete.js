@@ -19,7 +19,7 @@ type StateProps = {
   wheelCount: number,
   hasMotor: boolean,
   kind: string,
-  owners: Array<string> | [],
+  owners: Array<string>,
 }
 
 type DispatchProps = {
@@ -28,10 +28,12 @@ type DispatchProps = {
 
 type InnerProps = StateProps & DispatchProps;
 
-export class VechicleContainer extends Component<void, InnerProps, void> {
+export class VechicleContainer extends Component {
+  props: InnerProps;
+
   render() {
     return (
-      <Vechicle { ...this.props } />
+      <Vechicle { ...this.props } onDrive={ this._onDrive } />
     );
   }
 

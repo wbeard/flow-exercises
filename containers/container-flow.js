@@ -19,7 +19,7 @@ type StateProps = {
   wheelCount: number,
   hasMotor: boolean,
   kind: string,
-  owners: Array<string> | [],
+  owners: Array<string>,
 }
 
 type DispatchProps = {

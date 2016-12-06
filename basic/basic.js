@@ -15,10 +15,14 @@ type Props = {
   homePlanet: 'Earth' | 'Mars'
 };
 
-export default class Person extends Component<void, Props, void> {
+export default class Person extends Component {
+  props: Props;
+  
   render() {
-    <div>
-      { this.props.name }
-    </div>
+    return (
+      <div>
+        { this.props.name }
+      </div>
+    );
   }
 };

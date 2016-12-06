@@ -6,12 +6,16 @@ type ComponentProps = {
   dispatch: Function
 };
 
-export default class MyComponent extends Component<void, ComponentProps, void> {
+export default class MyComponent extends Component {
+  props: ComponentProps;
+  
   render() {
-    <div>
-      <button onClick={ this.driveForward }>Drive!</button>
-      <button onClick={ this.stopDriving }>Brake!</button>
-    </div>
+    return (
+      <div>
+        <button onClick={ this.driveForward }>Drive!</button>
+        <button onClick={ this.stopDriving }>Brake!</button>
+      </div>
+    );
   }
 
   driveForward = () => {
