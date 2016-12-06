@@ -14,7 +14,7 @@ import {
 import type { AppState } from '../actions&reducers/drive-flow-complete/reducer';
 import type { driveFn } from '../actions&reducers/drive-flow-complete/actions';
 
-type StateProps = {
+type MapStateProps = {
   color: string,
   wheelCount: number,
   hasMotor: boolean,
@@ -22,14 +22,14 @@ type StateProps = {
   owners: Array<string>,
 }
 
-type DispatchProps = {
+type MapDispatchProps = {
   drive: driveFn,
 };
 
-type InnerProps = StateProps & DispatchProps;
+type CombinedProps = MapStateProps & MapDispatchProps;
 
 export class VechicleContainer extends Component {
-  props: InnerProps;
+  props: CombinedProps;
 
   render() {
     return (
@@ -42,7 +42,7 @@ export class VechicleContainer extends Component {
   }
 }
 
-export const mapStateToProps = (state: AppState): StateProps => ({
+export const mapStateToProps = (state: AppState): MapStateProps => ({
   color: getColor(state),
   wheelCount: getWheelCount(state),
   hasMotor: getHasMotor(state),
@@ -50,7 +50,7 @@ export const mapStateToProps = (state: AppState): StateProps => ({
   owners: getOwners(state),
 });
 
-export const mapDispatchToProps: DispatchProps = {
+export const mapDispatchToProps: MapDispatchProps = {
   drive,
 };
 
