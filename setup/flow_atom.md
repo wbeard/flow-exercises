@@ -11,4 +11,6 @@ It provides a first-class development environment for React Native, Hack and Flo
 apm install nuclide
 ```
 
-After nuclide is installed, go to its settings and set its `Path to Executable Flow` to your local flow-bin, `./path/to/churro/node_modules/.bin/flow-bin`.
+After nuclide is installed, go to its settings and check **Use the Flow binary included in each project's flow-bin**.
+
+![Screenshot of the project flow-bin option](./images/nuclide_flow_config.png)
