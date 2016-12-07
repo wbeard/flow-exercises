@@ -1,7 +1,7 @@
 import * as Immutable from 'immutable';
 
-const getApple = (fruits) => {
-  const apple = fruits.get('apple');
+const hasEvenNumberOfApples = (fruits) => {
+  const apples = fruits.get('apples');
 
-  return apple;
+  return apples.length % 2 === 0;
 };

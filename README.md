@@ -21,5 +21,5 @@ Flow-exercises is always accepting contributions! What would we like help with? 
 5. [Third-party](./third-party)
 6. [Actions & Reducers](./actions&reducers)
 7. [Containers](./containers)
-8. [Advanced](./advanced)
+8. [Other](./other)
 9. [Troubleshooting](./troubleshooting)

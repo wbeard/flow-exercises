@@ -23,3 +23,5 @@ export const drive = (
     }
   };
 };
+
+export type DriveActionCreator = typeof drive;

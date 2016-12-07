@@ -2,7 +2,7 @@
 import * as Immutable from 'immutable';
 import type { DriveAction } from './actions';
 
-export type AppState = Immutable.Map<string, any>;
+export type AppState = Immutable.Map<string, any | void>;
 
 const initialState = Immutable.Map({
   accelerating: false,

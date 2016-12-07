@@ -12,7 +12,7 @@ import {
 } from '../actions&reducers/drive-flow/reducer';
 
 import type { AppState } from '../actions&reducers/drive-flow-complete/reducer';
-import type { driveFn } from '../actions&reducers/drive-flow-complete/actions';
+import type { DriveActionCreator } from '../actions&reducers/drive-flow-complete/actions';
 
 type MapStateProps = {
   color: string,
@@ -23,7 +23,7 @@ type MapStateProps = {
 }
 
 type MapDispatchProps = {
-  drive: driveFn,
+  drive: DriveActionCreator,
 };
 
 type CombinedProps = MapStateProps & MapDispatchProps;

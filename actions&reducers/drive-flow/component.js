@@ -1,14 +1,14 @@
 // @flow
 import React, { Component, PropTypes } from 'react';
-import { drive } from './actions';
+import type { DriveActionCreator } from './actions';
 
 type ComponentProps = {
-  dispatch: Function
+  drive: DriveActionCreator
 };
 
 export default class MyComponent extends Component {
   props: ComponentProps;
-  
+
   render() {
     return (
       <div>
@@ -19,10 +19,10 @@ export default class MyComponent extends Component {
   }
 
   driveForward = () => {
-    this.props.dispatch(drive(true, true, 'none', false));
+    this.props.drive(true, true, 'none', false);
   }
 
   stopDriving = () => {
-    this.props.dispatch(drive(false, true, 'none', false));
+    this.props.drive(false, true, 'none', false);
   }
 }

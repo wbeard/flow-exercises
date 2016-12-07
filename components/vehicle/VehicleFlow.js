@@ -1,7 +1,18 @@
 // @flow
 import React, { Component } from 'react';
 
+type Props = {
+  color?: string,
+  wheelCount: number,
+  hasMotor: bool,
+  kind: 'car' | 'truck' | '18-wheeler' | 'bicycle' | 'motorcycle',
+  onDrive: Function,
+  owners?: Array<string>
+}
+
 export default class Vehicle extends Component {
+  props: Props;
+
   render() {
     return (
       <div className={ `vehicle-${this.props.kind}` }>
